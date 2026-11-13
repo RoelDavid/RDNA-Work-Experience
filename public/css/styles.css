@@ -258,8 +258,9 @@ img {
 }
 
 .hero-media {
-  width: 600px;
-  flex-shrink: 0;
+  width: 100%;
+  max-width: 600px;
+  flex-shrink: 1;
 }
 
 .hero-image {
@@ -744,6 +745,43 @@ img {
   border-top: 1px solid #3a322d;
   margin-top: 48px;
   padding-top: 24px;
+}
+
+/* Hamburger menu RDNA */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--white);  
+}
+
+@media (max-width: 932px) {
+  .site-header--home .container {
+    flex-wrap: wrap;
+  }
+
+  .site-header--home nav .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .site-header--home .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .site-header--home .nav-links.active {
+    display: flex;
+  }
+
+  .site-header--home .nav-links a {
+    padding: 12px 14px;
+  }
 }
 
 @media (max-width: 768px) {
